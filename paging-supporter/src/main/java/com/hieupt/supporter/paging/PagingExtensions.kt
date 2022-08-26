@@ -8,3 +8,6 @@ import androidx.recyclerview.widget.RecyclerView
 
 fun RecyclerView.setupPagingSupporter(block: PagingSupporter.Builder.() -> Unit = {}): PagingSupporter.Builder =
     PagingSupporter.setupFor(this, block)
+
+fun RecyclerView.installPagingSupporter(block: PagingSupporter.Builder.() -> Unit = {}): PagingSupporter =
+    setupPagingSupporter(block).install()
